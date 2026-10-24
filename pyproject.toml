@@ -26,7 +26,11 @@ dependencies = [
     "sqlmodel>=0.0.48",
     "stripe>=16.0.0",
     "unicorn>=2.1.4",
+    "uvicorn>=0.54.0",
 ]
+
+[tool.uv]
+package = false
 
 [project.scripts]
 shopease = "shopease:main"
