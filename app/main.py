@@ -15,6 +15,9 @@ async def lifespan(app: FastAPI):
         await conn.execute(text("SELECT 1"))
 
     print("Successfully connected to DB")
+    print(f"Successfully connected to DB at {settings.DATABASE_URL}")
+
+    yield
 
 app = FastAPI(title="ShopeEase API", version="0.1.0", lifespan=lifespan)
 
